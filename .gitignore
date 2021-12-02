@@ -1,23 +1,42 @@
-/vendor/
-node_modules/
-npm-debug.log
-yarn-error.log
+/node_modules
+/Modules/Access/node_modules
+/Modules/Admin/node_modules
+/Modules/Front/node_modules
+/Modules/Fortum/node_modules
 
-# Laravel 4 specific
-bootstrap/compiled.php
-app/storage/
+/public/hot
+/public/storage
+/public/admin
 
-# Laravel 5 & Lumen specific
-public/storage
-public/hot
 
-# Laravel 5 & Lumen specific with changed public path
-public_html/storage
-public_html/hot
-
-storage/*.key
+/storage/*.key
+/vendor
 .env
-Homestead.yaml
-Homestead.json
-/.vagrant
+.env.backup
 .phpunit.result.cache
+Homestead.json
+Homestead.yaml
+.env
+/nbproject
+/yarn.lock
+/_ide_helper.php
+/public/css/
+/public/fonts/
+/public/js/
+/public/mix-manifest.json
+/public/docs/
+/resources/docs/
+/storage/doc/
+/storage/docsimple/
+/package-lock.json
+storage/app/public/rev_slider/images/
+storage/debugbar/
+
+
+public/userfiles/
+
+public/thumbs/
+public/theme/
+bootstrap/cache/
+
+storage/framework/laravel-excel/

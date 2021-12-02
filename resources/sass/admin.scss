@@ -1,0 +1,33 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+//@import './customCMS';
+
+//@import 'node_modules/font-awesome/scss/font-awesome';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+//@import '../../node_modules/@fortawesome/fontawesome-free';
+
+@import 'node_modules/admin-lte/build/scss/adminlte';
+//@import '../../node_modules/admin-lte/dist/css/adminlte.css';
+
+//node_modules/admin-lte/build/scss/AdminLTE.scss
+//@import 'node_modules/jquery.fancytree/dist/skin-lion/ui.fancytree.css';
+
+.inline-button-form {
+    display: inline-block;
+}
+
+.send-invitation-checkbox {
+    width: 15px;
+    height: 15px;
+    margin-top: 5px;
+}

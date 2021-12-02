@@ -1,0 +1,42 @@
+.btn-theme{
+    background: #00AFCB;
+    border-radius: 6px;
+    padding: 10px;
+    color: white;
+}
+
+.btn-theme:hover{
+    background: #008ba0;
+    color: white !important;
+}
+
+.profile-img{
+    width: 138px;
+    height: 138px;
+    background: #F2F2F2;
+    background-size: cover;
+    border-radius: 100%;
+    background-image: url('https://i.stack.imgur.com/y9DpT.jpg');
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+
+.input-s-45{
+    height: 45px !important;
+}
+
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    padding: 6px 12px;
+    cursor: pointer;
+    background: #00AFCB;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+}
+
+label:not(.form-check-label):not(.custom-file-label){
+    font-weight: 500 !important;
+}

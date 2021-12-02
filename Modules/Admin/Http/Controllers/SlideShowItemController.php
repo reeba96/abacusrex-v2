@@ -1,0 +1,190 @@
+<?php
+
+namespace Modules\Admin\Http\Controllers;
+
+use Illuminate\Routing\Controller;
+
+use Illuminate\Http\Request;
+use Modules\Admin\Entities\SlideShowItem;
+use Validator;
+use App\Rules\ValidCoordinate;
+
+class SlideShowItemController extends Controller
+{
+
+    // Get the items of the selected slide image
+    public function getSlideItems(Request $request) {
+        $slideshow_image_id = $request['image'];
+
+        $items = SlideShowItem::where('slide_show_image_id', $slideshow_image_id)->get();
+
+        return view('admin::admin.layouts.slideshow-item-editable', compact(['items', 'slideshow_image_id']));
+    }
+
+    // Create new slide image item instance in DB, and add it to the view
+    public function createItem(Request $request) {
+        $slideshow_image_id = $request['id'];
+        $item = new SlideShowItem();
+        $item->slide_show_image_id = $slideshow_image_id;
+        $item->text_en = 'New slide item';
+        $item->class = "very_big_white";
+        $item->x = 0;
+        $item->y = 0;
+        $item->start = 0;
+        $item->speed = 0;
+        $item->easing = "Bounce.easeIn";
+        $item->image_height = 0;
+        $item->image_width = 0;
+        $item->save();
+
+        $items = SlideShowItem::where('slide_show_image_id', $slideshow_image_id)->get();
+        return view('admin::admin.layouts.slideshow-item-editable', compact(['items', 'slideshow_image_id']));
+    }
+
+    // Editing the item properties with jQuery Editable
+    public function editableSlideItem(Request $request) {
+        $item = SlideShowItem::findOrFail($request['pk']);
+        if ($request['value'] == '') {
+          return response('The field can not be empty!', 400);
+        } else {
+          if ($request['name'] == 'class') {
+            $item->class = $request['value'];
+          } elseif ($request['name'] == 'x') {
+            $item->x = $request['value'];
+          } elseif ($request['name'] == 'y') {
+            $item->y = $request['value'];
+          } elseif ($request['name'] == 'speed') {
+            $item->speed = $request['value'];
+          } elseif ($request['name'] == 'start') {
+            $item->start = $request['value'];
+          } else {
+            $item->easing = $request['value'];
+          }
+          $item->save();
+          return response()->json(['message' => 'Item property successfully edited!'], 200);
+        }
+
+    }
+
+    public function addImage(Request $request) {
+      $item = SlideShowItem::findOrFail($request['item_id']);
+
+      if ($item) {
+          if(substr($request->file('item_image')->getMimeType(), 0, 5) != 'image') {
+              return response()->json(['status'=>'error', 'msg'=>'The uploaded file is not an image'], 200);
+          }
+
+          $validator = Validator::make($request->all(), [
+              'item_image' => 'max:'.(10*1024),
+          ]);
+
+          if ($validator->fails()) {
+              return response()->json(['status'=>'error', 'msg'=>'Too big file size. Max 10 MB'], 200);
+          }
+
+          $item->type = 2;
+          $orig_name = $request->file('item_image')->getClientOriginalName();
+          $name = explode('.', $orig_name);
+          $filename = $name[0] . '-' . $item->id . '.' . end($name);
+          $item->filename = $filename;
+          $item->save();
+
+          $dir = '/public/rev_slider/items';
+          $request->file('item_image')->storeAs($dir, $filename);
+          // $src = '/storage/rev_slider/images/' . $filename;
+
+          error_log($dir.'/'.$filename);
+          return response()->json(['status'=>'success', 'message' => 'Image successfully added', 'filename'=>$filename], 200);
+      } else {
+        return response()->json(['message' => 'Somethin went wrong!']);
+      }
+    }
+
+    // Publishing/unpublishing the slide image item
+    public function publish(Request $request) {
+      $slide_item = SlideShowItem::findOrFail($request['id']);
+      if ($slide_item) {
+        if ($request['status'] == 1) {
+            $slide_item->online = 0;
+            $status = 0;
+        } else {
+            $slide_item->online = 1;
+            $status = 1;
+        }
+        $slide_item->save();
+        return response()->json(['message' => "Slide image item's status changed successfully!", 'status' => $status]);
+      } else {
+        return response()->json(['message' => "Something went wrong!"]);
+      }
+
+    }
+
+    // Editing the item properties with jQueryForm
+    public function editSlideItem(Request $request) {
+        $item = SlideShowItem::findOrFail($request['item_id']);
+
+        $validator = Validator::make($request->all(), [
+            'speed' => 'integer|nullable',
+            'start' => 'integer|nullable',
+            'endspeed' => 'integer|nullable',
+            'hoffset' => 'integer|nullable',
+            'voffset' => 'integer|nullable',
+            'x' => [new ValidCoordinate('x')],
+            'y' => [new ValidCoordinate('y')]
+        ]);
+
+        if ($validator->fails()) {
+            $message_array = [];
+            foreach ($validator->messages()->getMessages() as $field_name => $messages)
+            {
+                $message_array[$field_name] = $messages;
+            }
+            return response()->json(['status' => 'error', 'messages' => $message_array ]);
+        }
+
+        $item->text_en = $request['text_en'];
+        $item->text_sr = $request['text_sr'];
+        $item->text_hu = $request['text_hu'];
+        $item->href_en = $request['href_en'];
+        $item->href_sr = $request['href_sr'];
+        $item->href_hu = $request['href_hu'];
+        $item->type = $request['type'];
+        $item->x = $request['x'];
+        $item->y = $request['y'];
+        $item->hoffset = $request['hoffset'];
+        $item->voffset = $request['voffset'];
+        $item->class = $request['class'];
+        $item->speed = $request['speed'];
+        $item->start = $request['start'];
+        $item->depth = $request['depth'];
+        $item->easing = $request['easing'];
+        $item->endeasing = $request['endeasing'];
+        $item->endspeed = $request['endspeed'];
+        $item->customout = $request['customout'];
+        $item->customin = $request['customin'];
+        $item->save();
+
+        $slide_image_id = $item->slide_show_image_id;
+
+        return response()->json(['id' => $slide_image_id ]);
+    }
+
+    // Delete the item from DB, and refresh the view
+    public function deleteImageItem(Request $request) {
+        $item_id = $request['id'];
+        $item = SlideShowItem::findOrFail($item_id);
+        // AJAXOS MEGVALOS
+        // $slideshow_image_id = $item->slideshow_id;
+        // if ($item) {
+        //   $item->delete();
+        // }
+        // return response()->json(['message' => 'success', 'slide_id' => $slideshow_image_id]);
+
+        $slideshow_image_id = $item->slide_show_image_id;
+        if ($slideshow_image_id) {
+            $item->delete();
+        }
+        $items = SlideShowItem::where('slide_show_image_id', $slideshow_image_id)->get();
+        return view('admin::admin.layouts.slideshow-item-editable', compact(['items', 'slideshow_image_id']));
+    }
+}

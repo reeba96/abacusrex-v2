@@ -1,0 +1,67 @@
+[
+    {
+        "model-name": "Roles",
+        "resource-file": "roles.json",
+        "table-name": "roles"
+    },
+    {
+        "model-name": "Permissions",
+        "resource-file": "permissions.json",
+        "table-name": "permissions"
+    },
+    {
+        "model-name": "LanguageLines",
+        "resource-file": "language_lines.json",
+        "table-name": "language_lines"
+    },
+    {
+        "model-name": "Invitation",
+        "resource-file": "invitations.json",
+        "table-name": "invitations"
+    },
+    {
+        "model-name": "Tags",
+        "resource-file": "tags.json",
+        "table-name": "tags"
+    },
+    {
+        "model-name": "Countries",
+        "resource-file": "countries.json",
+        "table-name": "countries"
+    },
+    {
+        "model-name": "Categories",
+        "resource-file": "categories.json",
+        "table-name": "categories"
+    },
+    {
+        "model-name": "Products",
+        "resource-file": "products.json",
+        "table-name": "products"
+    },
+    {
+        "model-name": "Product_attributes",
+        "resource-file": "product_attributes.json",
+        "table-name": "product_attributes"
+    },
+    {
+        "model-name": "User",
+        "resource-file": "users.json",
+        "table-name": "users"
+    },
+    {
+        "model-name": "Email",
+        "resource-file": "emails.json",
+        "table-name": "emails"
+    },
+    {
+        "model-name": "Transactions",
+        "resource-file": "transactions.json",
+        "table-name": "transactions"
+    },
+    {
+        "model-name": "rfids",
+        "resource-file": "rfids.json",
+        "table-name": "rfids"
+    }
+]
