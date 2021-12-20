@@ -37,7 +37,7 @@ class RolesAndPermissionsSeeder extends Seeder
             'firstname' => 'admin',
             'lastname' => '',
             'confirmed' => 1,
-            'password' => Hash::make('PeopleCounter12#')
+            'password' => Hash::make('admin123')
         ]);
         $admin->assignRole('admin');
 

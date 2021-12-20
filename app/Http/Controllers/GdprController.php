@@ -17,27 +17,20 @@ class GdprController extends Controller
      */
     public function download(GdprDownload $request)
     {
-        try {
-            $credentials = [
-                $request->user()->getAuthIdentifierName() => $request->user()->getAuthIdentifier(),
-                'password'                                => $request->input('password'),
-            ];
+        $credentials = [
+            $request->user()->getAuthIdentifierName() => $request->user()->getAuthIdentifier(),
+            'password'                                => $request->input('password'),
+        ];
 
-            if (!Auth::attempt($credentials)) {
-                return back()->with('confirm_password_error', 'Invalid password');
-            }
+        abort_unless(Auth::attempt($credentials), 403);
 
-            return response()->json(
-                $request->user()->portable(),
-                200,
-                [
-                    'Content-Disposition' => 'attachment; filename="user.json"',
-                ]
-            );
-        } catch (Exception $exception) {
-            return back()->withInput()
-                ->withErrors(['unexpected_error' => trans("translate.unexpected_error")]);
-        }
+        return response()->json(
+            $request->user()->portable(),
+            200,
+            [
+                'Content-Disposition' => 'attachment; filename="user.json"',
+            ]
+        );
     }
 
     /**

@@ -67,6 +67,6 @@ return [
     |
     |
     */
-    'enabled' => env('GDPR_ENABLED', false),
+    'enabled' => env('GDPR_ENABLED', true),
 
 ];

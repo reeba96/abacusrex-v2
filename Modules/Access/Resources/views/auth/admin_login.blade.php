@@ -4,12 +4,12 @@
 
 <style>
     .btn-primary{
-        border-color: #00AFCB !important;
-        background-color: #00AFCB !important;
+        border-color: #bf5329 !important;
+        background-color: #bf5329 !important;
     }
 
     .btn-primary:hover{
-        background-color: #0093ab !important
+        background-color: #bf5329 !important
     }
 
     body{
@@ -24,7 +24,7 @@
             <div class="clearfix">
                 <div class="col-sm-12 col-md-10 col-md-offset-2">
                     <div class="logo-title-container" style="top: 40% !important;">
-                        <img class="d-none" src="/images/alteo-admin.png">
+                        <img class="d-none" src="{{ asset('./images/abacus_logo.jpg') }}" style="width: 35%; margin-top: 5%;">
                     </div> <!-- .logo-title-container -->
                 </div>
             </div>
@@ -59,7 +59,7 @@
                 <br>
 
               </form>
-              <a href="{{ route('password.request') }}"> {{trans('translate.reset_password')}}</a>
+              <a href="{{ route('password.request') }}" style="color: #AAAAAA;"> {{trans('translate.reset_password')}}</a>
                 @if (config('access.admin_can_register'))
                     <button type="submit" class="btn btn-block btn-secondary">
                         <a href="{{ route('register') }}"> {{trans('translate.register')}}</a>

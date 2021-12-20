@@ -5,8 +5,8 @@
 
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <div class="header">
-      <a href="#" style="height: 75px" class="brand-link text-center">
-        <img src="/images/icbtech_logo.png"  alt="Logo" class="w-80 brand-image">
+      <a href="/admin/dashboard" style="height: 75px" class="brand-link text-center">
+        <img src="{{ asset('./images/abacus_logo.jpg') }}"  alt="Logo" class="w-80 brand-image" style="margin-left: 35px;">
       </a>
     </div>
     <div class="sidebar">
@@ -88,13 +88,6 @@
                 <a href="{{ route('invitations.invitation.index') }}" class="nav-link {{ Request::is($locale.'/admin/access/invitations*') ? 'active' : ''}}">
                   <i class="fas fa-glass-cheers nav-icon"></i>
                   <p>{{trans('translate.invitations') }}</p>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link {{ Request::is($locale.'/admin/access/user-logs*') ? 'active' : ''}}" href="{{ route('access.user.logs') }}">
-                  <i class="nav-icon far fa-list-alt"></i>
-                  <p>{{trans('translate.user_logs') }}</p>
                 </a>
               </li>
 

@@ -22,11 +22,11 @@
 }
 
 .sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active, .sidebar-light-primary .nav-sidebar > .nav-item > .nav-link.active {
-    background-color: #E3A716;
+    background-color: #bf4740;
 }
 
 [class*=sidebar-dark-] .nav-treeview > .nav-item > .nav-link.active, [class*=sidebar-dark-] .nav-treeview > .nav-item > .nav-link.active:hover, [class*=sidebar-dark-] .nav-treeview > .nav-item > .nav-link.active:focus {
-    background-color: #E3A716;
+    background-color: #bf4740;
 }
 
 [class*=sidebar-dark-] .header {
@@ -45,6 +45,14 @@
     width: 22px;
     background-color: #fff;
     text-align: center;
+}
+
+.sidebar {
+    background-color: #e1dede;
+}
+
+.main-sidebar {
+    background-color: #e1dede;
 }
 
 [class*=sidebar-dark-] .nav-treeview>.nav-item>.nav-link {
@@ -1311,4 +1319,22 @@ ul.dropdown-menu.show ul li {
 
 .ss {
     background-position: 0 -7872px;
+}
+
+input[type="text"], input[type="password"], textarea {
+    background-color: #e1dede !important;
+}
+
+.main-sidebar .sidebar-dark-primary .elevation-4 {
+    background-color: #e1dede !important;
+}
+
+button.btn.btn-primary {
+    background-color: #bf4740 !important;
+    border-color: #bf4740 !important;
+}
+
+a.btn.btn-primary.btn-flat {
+    background-color: #bf4740 !important;
+    border-color: #bf4740 !important;
 }
