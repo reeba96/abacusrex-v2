@@ -40,3 +40,7 @@ public/theme/
 bootstrap/cache/
 
 storage/framework/laravel-excel/
+
+bootstrap/error_log
+error_log
+spublic/error_log

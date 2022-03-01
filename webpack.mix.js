@@ -18,7 +18,8 @@ mix.sass('resources/sass/admin.scss', 'public/css');
 mix.copy('Modules/Admin/Resources/assets/css/customAdmin.css/', 'public/css/customAdmin.css');
 mix.copy('Modules/Admin/Resources/assets/css/login.css/', 'public/css/login.css');
 mix.copy('Modules/Admin/Resources/assets/css/animate.min.css/', 'public/css/animate.min.css');
-mix.copy('public/images', 'Modules/Front/Resources/assets/images');
+mix.copy('Modules/Front/Resources/assets/images/', 'public/front/img/');
+// mix.copy('public/images', 'Modules/Front/Resources/assets/images');
 
 mix.styles([
     'public/css/admin.css',

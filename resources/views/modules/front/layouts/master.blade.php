@@ -35,19 +35,16 @@
                     <div class="collapse navbar-collapse" id="main-navbar">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item active">
-                            <a href="#home" class="nav-link" data-animate="scrolling">Homee</a>
+                              <a href="#about" class="nav-link" data-animate="scrolling">O nama</a>
                             </li>
                             <li class="nav-item">
-                            <a href="#about" class="nav-link" data-animate="scrolling">About</a>
+                              <a href="#eSFinx" class="nav-link" data-animate="scrolling">eSFinx paket</a>
                             </li>
                             <li class="nav-item">
-                            <a href="#portfolio" class="nav-link" data-animate="scrolling">Portfolio</a>
+                              <a href="#portfolio" class="nav-link" data-animate="scrolling">Budzetski paket</a>
                             </li>
                             <li class="nav-item">
-                            <a href="#blog" class="nav-link" data-animate="scrolling">Blog</a>
-                            </li>
-                            <li class="nav-item">
-                            <a href="#contact" class="nav-link" data-animate="scrolling">Contact</a>
+                              <a href="#contact" class="nav-link" data-animate="scrolling">Contact</a>
                             </li>
                         </ul>
                         <ul class="nav ml-auto">

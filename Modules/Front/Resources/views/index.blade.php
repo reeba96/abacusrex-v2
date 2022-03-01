@@ -3,27 +3,6 @@
 @section('content')
 
 <div class="vg-page page-about" id="about">
-  <div class="container py-5">
-    <div class="row">
-      <div class="col-lg-4 py-3">
-        <div class="img-place wow fadeInUp">
-          <img src="../assets/img/person.jpg" alt="">
-        </div>
-      </div>
-      <div class="col-lg-6 offset-lg-1 wow fadeInRight">
-        <h1 class="fw-light">Stephen Doe</h1>
-        <h5 class="fg-theme mb-3">UI/UX & Web Designer</h5>
-        <p class="text-muted">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form but the majority have suffered alteration in some</p>
-        <ul class="theme-list">
-          <li><b>From:</b> Texas, US</li>
-          <li><b>Lives In:</b> Texas, US</li>
-          <li><b>Age:</b> 25</li>
-          <li><b>Gender:</b> Male</li>
-        </ul>
-        <button class="btn btn-theme-outline">Download CV</button>
-      </div>
-    </div>
-  </div>
   <div class="container pt-5">
     <div class="row">
       <div class="col-md-6 wow fadeInRight">
@@ -86,56 +65,57 @@
       </div>
     </div>
   </div>
-</div>
 
-<div class="vg-page page-service">
-  <div class="container">
-    <div class="text-center wow fadeInUp">
-      <div class="badge badge-subhead">Service</div>
-    </div>
-    <h1 class="fw-normal text-center wow fadeInUp">What can i do?</h1>
-    <div class="row mt-5">
-      <div class="col-md-6 col-lg-4 col-xl-3">
-        <div class="card card-service wow fadeInUp">
-          <div class="icon">
-            <span class="ti-paint-bucket"></span>
-          </div>
-          <div class="caption">
-            <h4 class="fg-theme">Web Design</h4>
-            <p>There are many variations of passages of Lorem Ipsum available</p>
+
+  <div class="vg-page page-service">
+    <div class="container">
+      <div class="text-center wow fadeInUp">
+        <div class="badge badge-subhead">Service</div>
+      </div>
+      <h1 class="fw-normal text-center wow fadeInUp">What can i do?</h1>
+      <div class="row mt-5">
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card card-service wow fadeInUp">
+            <div class="icon">
+              <span class="ti-paint-bucket"></span>
+            </div>
+            <div class="caption">
+              <h4 class="fg-theme">Web Design</h4>
+              <p>There are many variations of passages of Lorem Ipsum available</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-6 col-lg-4 col-xl-3">
-        <div class="card card-service wow fadeInUp">
-          <div class="icon">
-            <span class="ti-search"></span>
-          </div>
-          <div class="caption">
-            <h4 class="fg-theme">SEO</h4>
-            <p>There are many variations of passages of Lorem Ipsum available</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 col-xl-3">
-        <div class="card card-service wow fadeInUp">
-          <div class="icon">
-            <span class="ti-vector"></span>
-          </div>
-          <div class="caption">
-            <h4 class="fg-theme">UI/UX Design</h4>
-            <p>There are many variations of passages of Lorem Ipsum available</p>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card card-service wow fadeInUp">
+            <div class="icon">
+              <span class="ti-search"></span>
+            </div>
+            <div class="caption">
+              <h4 class="fg-theme">SEO</h4>
+              <p>There are many variations of passages of Lorem Ipsum available</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-6 col-lg-4 col-xl-3">
-        <div class="card card-service wow fadeInUp">
-          <div class="icon">
-            <span class="ti-desktop"></span>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card card-service wow fadeInUp">
+            <div class="icon">
+              <span class="ti-vector"></span>
+            </div>
+            <div class="caption">
+              <h4 class="fg-theme">UI/UX Design</h4>
+              <p>There are many variations of passages of Lorem Ipsum available</p>
+            </div>
           </div>
-          <div class="caption">
-            <h4 class="fg-theme">Web Development</h4>
-            <p>There are many variations of passages of Lorem Ipsum available</p>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card card-service wow fadeInUp">
+            <div class="icon">
+              <span class="ti-desktop"></span>
+            </div>
+            <div class="caption">
+              <h4 class="fg-theme">Web Development</h4>
+              <p>There are many variations of passages of Lorem Ipsum available</p>
+            </div>
           </div>
         </div>
       </div>
@@ -143,7 +123,7 @@
   </div>
 </div>
 
-<div class="vg-page page-funfact" style="background-image: url(../assets/img/bg_banner.jpg);">
+<div class="vg-page page-funfact" id="eSFinx" style="background-image: url(../assets/img/bg_banner.jpg);">
   <div class="container">
     <div class="row section-counter">
       <div class="col-md-6 col-lg-3 py-4 wow fadeIn">
@@ -165,6 +145,7 @@
     </div>
   </div>
 </div>
+
 
 <!-- Portfolio page -->
 <div class="vg-page page-portfolio" id="portfolio">
@@ -253,44 +234,44 @@
     <div class="row">
       <div class="col-md-6 col-lg-4 col-xl-3 item">
         <div class="img-place wow fadeInUp">
-          <img src="../assets/img/logo/company_1.svg" alt="">
+          <img src="front/img/logo/company_1.svg" alt="">
         </div>
       </div>
       <div class="col-md-6 col-lg-4 col-xl-3 item">
         <div class="img-place wow fadeInUp">
-          <img src="../assets/img/logo/company_2.svg" alt="">
+          <img src="front/img/logo/company_2.svg" alt="">
         </div>
       </div>
       <div class="col-md-6 col-lg-4 col-xl-3 item">
         <div class="img-place wow fadeInUp">
-          <img src="../assets/img/logo/company_3.svg" alt="">
+          <img src="front/img/logo/company_3.svg" alt="">
         </div>
       </div>
       <div class="col-md-6 col-lg-4 col-xl-3 item">
         <div class="img-place wow fadeInUp">
-          <img src="../assets/img/logo/company_4.svg" alt="">
+          <img src="front/img/logo/company_4.svg" alt="">
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-md-6 col-lg-4 col-xl-3 item">
         <div class="img-place wow fadeInUp">
-          <img src="../assets/img/logo/company_5.svg" alt="">
+          <img src="front/img/logo/company_5.svg" alt="">
         </div>
       </div>
       <div class="col-md-6 col-lg-4 col-xl-3 item">
         <div class="img-place wow fadeInUp">
-          <img src="../assets/img/logo/company_6.svg" alt="">
+          <img src="front/img/logo/company_6.svg" alt="">
         </div>
       </div>
       <div class="col-md-6 col-lg-4 col-xl-3 item">
         <div class="img-place wow fadeInUp">
-          <img src="../assets/img/logo/company_7.svg" alt="">
+          <img src="front/img/portfolio/mnt.png" alt="">
         </div>
       </div>
       <div class="col-md-6 col-lg-4 col-xl-3 item">
         <div class="img-place wow fadeInUp">
-          <img src="../assets/img/logo/company_8.svg" alt="">
+          <img src="front/img/portfolio/dz.png" alt="">
         </div>
       </div>
     </div>
