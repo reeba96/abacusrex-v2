@@ -48,7 +48,6 @@ return [
             'use_bom'                => false,
             'include_separator_line' => false,
             'excel_compatibility'    => false,
-            'output_encoding'        => '',
         ],
 
         /*
@@ -122,7 +121,7 @@ return [
         |
         */
         'csv'         => [
-            'delimiter'        => null,
+            'delimiter'        => ',',
             'enclosure'        => '"',
             'escape_character' => '\\',
             'contiguous'       => false,
@@ -277,9 +276,6 @@ return [
     */
     'transactions' => [
         'handler' => 'db',
-        'db'      => [
-            'connection' => null,
-        ],
     ],
 
     'temporary_files' => [
