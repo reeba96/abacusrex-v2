@@ -67,24 +67,42 @@
   </div>
 
 
+  <!-- Services -->
   <div class="vg-page page-service">
     <div class="container">
+
       <div class="text-center wow fadeInUp">
-        <div class="badge badge-subhead">Service</div>
+        <div class="badge badge-subhead">Usluge</div>
       </div>
-      <h1 class="fw-normal text-center wow fadeInUp">What can i do?</h1>
+
+      <h1 class="fw-normal text-center wow fadeInUp">Čime se bavimo?</h1>
+
       <div class="row mt-5">
+
         <div class="col-md-6 col-lg-4 col-xl-3">
           <div class="card card-service wow fadeInUp">
             <div class="icon">
-              <span class="ti-paint-bucket"></span>
+              <span class="ti-bar-chart"></span>
             </div>
             <div class="caption">
-              <h4 class="fg-theme">Web Design</h4>
+              <h4 class="fg-theme">Knjigovodstvo</h4>
               <p>There are many variations of passages of Lorem Ipsum available</p>
             </div>
           </div>
         </div>
+
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card card-service wow fadeInUp">
+            <div class="icon">
+              <span class="ti-cloud"></span>
+            </div>
+            <div class="caption">
+              <h4 class="fg-theme">Vodovod</h4>
+              <p>There are many variations of passages of Lorem Ipsum available</p>
+            </div>
+          </div>
+        </div>
+
         <div class="col-md-6 col-lg-4 col-xl-3">
           <div class="card card-service wow fadeInUp">
             <div class="icon">
@@ -96,17 +114,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4 col-xl-3">
-          <div class="card card-service wow fadeInUp">
-            <div class="icon">
-              <span class="ti-vector"></span>
-            </div>
-            <div class="caption">
-              <h4 class="fg-theme">UI/UX Design</h4>
-              <p>There are many variations of passages of Lorem Ipsum available</p>
-            </div>
-          </div>
-        </div>
+
         <div class="col-md-6 col-lg-4 col-xl-3">
           <div class="card card-service wow fadeInUp">
             <div class="icon">
@@ -118,34 +126,35 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
-  </div>
+  </div> <!-- End services -->
+
 </div>
 
 <div class="vg-page page-funfact" id="eSFinx" style="background-image: url(../assets/img/bg_banner.jpg);">
   <div class="container">
     <div class="row section-counter">
       <div class="col-md-6 col-lg-3 py-4 wow fadeIn">
-        <h1 class="number" data-number="768">768</h1>
-        <span>Clients</span>
+        <h1 class="number" data-number="27">27</h1>
+        <span>Postojanje</span>
       </div>
       <div class="col-md-6 col-lg-3 py-4 wow fadeIn">
-        <h1 class="number" data-number="230">230</h1>
-        <span>Project Compleate</span>
+        <h1 class="number" data-number="99">99</h1>
+        <span>Klienti</span>
       </div>
       <div class="col-md-6 col-lg-3 py-4 wow fadeIn">
-        <h1 class="number" data-number="97">97</h1>
-        <span>Project Ongoing</span>
+        <h1 class="number" data-number="50">50</h1>
+        <span>Iskustvo</span>
       </div>
       <div class="col-md-6 col-lg-3 py-4 wow fadeIn">
-        <h1 class="number" data-number="699">699</h1>
-        <span>Client Satisfaction</span>
+        <h1 class="number" data-number="9">9</h1>
+        <span>Tehnologije</span>
       </div>
     </div>
   </div>
 </div>
-
 
 <!-- Portfolio page -->
 <div class="vg-page page-portfolio" id="portfolio">
@@ -228,88 +237,94 @@
 
 
 
-<!-- Client -->
+<!-- Portfolio -->
 <div class="vg-page page-client">
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-lg-4 col-xl-3 item">
-        <div class="img-place wow fadeInUp">
-          <img src="front/img/logo/company_1.svg" alt="">
+        <div class="img-place wow fadeInUp logo-div">
+          <img class="hometrend-logo" src="front/img/portfolio/hometrend.png" alt="HomeTrend">
         </div>
       </div>
       <div class="col-md-6 col-lg-4 col-xl-3 item">
-        <div class="img-place wow fadeInUp">
-          <img src="front/img/logo/company_2.svg" alt="">
+        <div class="img-place wow fadeInUp logo-div">
+          <img class="vodovod-logo" src="front/img/portfolio/vodovod_logo.png" alt="Vodovod Bezdan">
         </div>
       </div>
       <div class="col-md-6 col-lg-4 col-xl-3 item">
-        <div class="img-place wow fadeInUp">
-          <img src="front/img/logo/company_3.svg" alt="">
+        <div class="img-place wow fadeInUp logo-div">
+          <img class="fruit-land-logo" src="front/img/portfolio/fruit_land.png" alt="Fruit Land">
         </div>
       </div>
       <div class="col-md-6 col-lg-4 col-xl-3 item">
-        <div class="img-place wow fadeInUp">
-          <img src="front/img/logo/company_4.svg" alt="">
+        <div class="img-place wow fadeInUp logo-div">
+          <img class="agrooprema-logo" src="front/img/portfolio/agrooprema.png" alt="Agrooprema">
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-md-6 col-lg-4 col-xl-3 item">
-        <div class="img-place wow fadeInUp">
-          <img src="front/img/logo/company_5.svg" alt="">
+        <div class="img-place wow fadeInUp logo-div">
+          <img class="decorex-logo" src="front/img/portfolio/decorex.png" alt="Decorex">
         </div>
       </div>
       <div class="col-md-6 col-lg-4 col-xl-3 item">
-        <div class="img-place wow fadeInUp">
-          <img src="front/img/logo/company_6.svg" alt="">
+        <div class="img-place wow fadeInUp logo-div">
+          <img class="sopro-logo" src="front/img/portfolio/sopro.png" alt="Sopro">
         </div>
       </div>
       <div class="col-md-6 col-lg-4 col-xl-3 item">
-        <div class="img-place wow fadeInUp">
-          <img src="front/img/portfolio/mnt.png" alt="">
+        <div class="img-place wow fadeInUp logo-div">
+          <img class="mnt-logo" src="front/img/portfolio/mnt.png" alt="MNT">
         </div>
       </div>
       <div class="col-md-6 col-lg-4 col-xl-3 item">
-        <div class="img-place wow fadeInUp">
-          <img src="front/img/portfolio/dz.png" alt="">
+        <div class="img-place wow fadeInUp logo-div">
+          <img class="dz-logo" src="front/img/portfolio/dz.png" alt="Dom Zdravlja">
         </div>
       </div>
     </div>
   </div>
-</div> <!-- End client -->
+</div> <!-- End portfolio -->
 
 <!-- Contact -->
 <div class="vg-page page-contact" id="contact">
   <div class="container-fluid">
+
     <div class="text-center wow fadeInUp">
-      <div class="badge badge-subhead">Contact</div>
+      <div class="badge badge-subhead">Kontakt</div>
     </div>
-    <h1 class="text-center fw-normal wow fadeInUp">Get in touch</h1>
+
+    <h1 class="text-center fw-normal wow fadeInUp">Kontaktirajte Nas</h1>
+
     <div class="row py-5">
+
       <div class="col-lg-7 px-0 pr-lg-3 wow zoomIn">
         <div class="vg-maps">
           <div id="google-maps" style="width: 100%; height: 100%;"></div>
         </div>
       </div>
+
       <div class="col-lg-5">
         <form class="vg-contact-form">
           <div class="form-row">
             <div class="col-12 mt-3 wow fadeInUp">
-              <input class="form-control" type="text" name="Name" placeholder="Your Name">
+              <input class="form-control" type="text" name="Name" placeholder="Ime">
             </div>
             <div class="col-6 mt-3 wow fadeInUp">
-              <input class="form-control" type="text" name="Email" placeholder="Email Address">
+              <input class="form-control" type="text" name="Email" placeholder="Email">
             </div>
             <div class="col-6 mt-3 wow fadeInUp">
-              <input class="form-control" type="text" name="Subject" placeholder="Subject">
+              <input class="form-control" type="text" name="Subject" placeholder="Naslov">
             </div>
             <div class="col-12 mt-3 wow fadeInUp">
-              <textarea class="form-control" name="Message" rows="6" placeholder="Enter message here.."></textarea>
+              <textarea class="form-control" name="Message" rows="6" placeholder="Poruka..."></textarea>
             </div>
-            <button type="submit" class="btn btn-theme mt-3 wow fadeInUp ml-1">Send Message</button>
+            <button type="submit" class="btn btn-theme mt-3 wow fadeInUp ml-1">Pošalji</button>
           </div>
         </form>
       </div>
+
     </div>
   </div>
 </div> <!-- End Contact -->

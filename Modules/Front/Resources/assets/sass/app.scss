@@ -1,0 +1,65 @@
+/* LOGOS */
+
+.hometrend-logo {
+    width: 240px !important;
+    height: 50px !important;
+}
+
+.vodovod-logo {
+    width: 250px !important;
+    height: 30px !important;
+}
+
+.fruit-land-logo {
+    width: 240px !important;
+    height: 50px !important;
+}
+
+.agrooprema-logo {
+    width: 240px !important;
+    height: 50px !important;
+}
+
+.decorex-logo {
+    width: 230px !important;
+    height: 150px !important;
+}
+
+.sopro-logo {
+    width: 230px !important;
+    height: 150px !important;
+}
+
+.mnt-logo {
+    width: 320px !important;
+    height: 180px !important;
+}
+
+.dz-logo {
+    width: 220px !important;
+    height: 90px !important;
+}
+
+.logo-div {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+/* OTHER CLASSES */
+
+@media (min-width: 1200px) {
+    .container, .container-sm, .container-md, .container-lg, .container-xl {
+        max-width: 1350px !important;
+    }
+}
+
+.page-client .img-place { 
+    height: 180px !important;
+    width: 250px !important;
+}
+
+.page-client .row .item {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
