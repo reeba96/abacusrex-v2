@@ -13,6 +13,12 @@
 
 Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath']], function() {
    
-    Route::get('/', 'FrontController@index');
+    Route::get('/', 'FrontController@index')->name('page.index');
+
+    Route::get('/esfinx', 'FrontController@esfinx')->name('page.esfinx');
+
+    Route::get('/budzetski', 'FrontController@budzetski')->name('page.budzetski');
+
+    Route::get('/vodovod', 'FrontController@vodovod')->name('page.vodovod');
 
 });

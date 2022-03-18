@@ -26,11 +26,11 @@ class JsonTranslator extends BaseTranslator
         $translation = parent::get($key, $replace, $locale, false);
         
         if ($translation === $key) {
-            Log::warning('Language item could not be found.', [
+            /* Log::warning('Language item could not be found.', [
                 'language' => $locale ?? config('app.locale'),
                 'id' => $key,
                 'url' => config('app.url')
-            ]);
+            ]); */
 
             if (strpos($key,'.')){
 

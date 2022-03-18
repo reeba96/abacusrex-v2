@@ -107,7 +107,7 @@ $(document).ready(function () {
       var self = this;
       
       var windowTop = Math.floor($(window).scrollTop());
-      var $stickyLinks = self.$sticky.find('.navbar-nav .nav-item').removeClass('active');
+      /* var $stickyLinks = self.$sticky.find('.navbar-nav .nav-item').removeClass('active'); */
       var stickyPosition = 'fixed';
       var currentIndex = 0;
       
@@ -137,7 +137,7 @@ $(document).ready(function () {
         self.$sticky.addClass('floating');
       }
       
-      $stickyLinks.eq(currentIndex).addClass('active');
+      /*$stickyLinks.eq(currentIndex).addClass('active');*/
     },
     
     init: function () {
@@ -165,7 +165,7 @@ $(document).ready(function () {
 
 $(document).ready(function() {
   $('#sideel').click(function() {
-    $(this).parents('.config').toggleClass('active');
+   /* $(this).parents('.config').toggleClass('active'); */
   });
   
   $('body').data('bodyClassList', '');
